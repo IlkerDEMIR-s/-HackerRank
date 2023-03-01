@@ -1,0 +1,20 @@
+def reverse_words_order_and_swap_cases(sentence):
+    mystr = ''
+    for i in sentence:
+        if i.isspace():
+            mystr+= " "
+        else:
+            if i.isupper():
+                mystr+= i.lower()
+            if i.islower():
+                mystr+= i.upper()
+    words = list(reversed(mystr.split()))
+    mywords = " ".join(words)
+    return mywords
+
+    
+
+inputWord = input()  
+    
+out = reverse_words_order_and_swap_cases(inputWord)
+print(out)
