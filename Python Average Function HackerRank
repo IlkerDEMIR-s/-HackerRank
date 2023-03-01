@@ -1,0 +1,24 @@
+#!python3!
+
+# Define the avg function
+def avg(*args):
+    # Check if there are no arguments passed
+    if len(args) == 0:
+        return 0
+    
+    # Calculate the average and round to 2 decimal places
+    return round(float(sum(args)) / len(args), 2)
+
+# Define the main function
+def main():
+    # Read space-separated integers from input and convert to list of integers
+    arguments = map(int, input().split())
+    
+    # Calculate the average of the integers using the avg function
+    result = avg(*arguments)
+    
+    # Print the result with exactly 2 decimal places
+    print('{:.2f}'.format(result))
+
+# Call the main function
+main()
